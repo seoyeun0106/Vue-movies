@@ -35,8 +35,5 @@ export default{
         'searchMovies'
        ])
     },
-    mounted(){
-        console.log(this.$store)
-    }
 }
 </script>
