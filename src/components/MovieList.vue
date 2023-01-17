@@ -1,7 +1,12 @@
 <template>
-  <v-row>
+  <v-row
+    v-masonry
+    item-selector=".item"
+  >
         <v-col 
-            v-for="movie in movies" 
+            v-for="movie in movies"
+            v-masonry-tile 
+            class="item"
             :key="movie.imdbID"
             cols="12"
             lg="3"
@@ -9,6 +14,7 @@
             sm="6">
           <v-card>
             <v-img
+            height="500"
             :src="movie.Poster"
             :alt="movie.Title">
             </v-img>
