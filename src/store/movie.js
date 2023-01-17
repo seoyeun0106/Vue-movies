@@ -1,10 +1,7 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
 import axios from 'axios';
 const API_KEY ="9b0ceb74"
-Vue.use(Vuex);
 
-export default new Vuex.Store({
+export default {
     namespaced:true,
     state:()=>({
         title:"",
@@ -14,23 +11,24 @@ export default new Vuex.Store({
     getters:{},
     mutations:{
         updateState(state,payload){
+            console.log("committed")
             Object.keys(payload).forEach(key=>{
                 state[key] = payload[key]
             })
         }
     },
     actions:{
-        async serachMovies({state,commit}){
+        async searchMovies({commit, state}){
             commit('updateState',{
                 loading:true,  
             })
-            const res = await axios.get(`http://www.omdbapi.com/?s=magic&apikey=${API_KEY}`); 
-            state.movies = res.data.Search
+            const res = await axios.get(`http://www.omdbapi.com/?s=${state.title}&apikey=${API_KEY}`); 
             commit('updateState',{
+                movies:res.data.Search,
                 loading:false,  
             })
 
         }
         
     },
-})
+}

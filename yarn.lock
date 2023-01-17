@@ -3372,6 +3372,11 @@
     "inherits" "^2.0.1"
     "minimalistic-assert" "^1.0.0"
 
+"desandro-matches-selector@^2.0.0":
+  "integrity" "sha512-+1q0nXhdzg1IpIJdMKalUwvvskeKnYyEe3shPRwedNcWtnhEKT3ZxvFjzywHDeGcKViIxTCAoOYQWP1qD7VNyg=="
+  "resolved" "https://registry.npmjs.org/desandro-matches-selector/-/desandro-matches-selector-2.0.2.tgz"
+  "version" "2.0.2"
+
 "destroy@1.2.0":
   "integrity" "sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg=="
   "resolved" "https://registry.npmmirror.com/destroy/-/destroy-1.2.0.tgz"
@@ -3854,6 +3859,11 @@
   "resolved" "https://registry.npmmirror.com/etag/-/etag-1.8.1.tgz"
   "version" "1.8.1"
 
+"ev-emitter@^1.0.0":
+  "integrity" "sha512-ipiDYhdQSCZ4hSbX4rMW+XzNKMD1prg/sTvoVmSLkuQ1MVlwjJQQA+sW8tMYR3BLUr9KjodFV4pvzunvRhd33Q=="
+  "resolved" "https://registry.npmjs.org/ev-emitter/-/ev-emitter-1.1.1.tgz"
+  "version" "1.1.1"
+
 "event-pubsub@4.3.0":
   "integrity" "sha512-z7IyloorXvKbFx9Bpie2+vMJKKx1fH1EN5yiTfp8CiLOTptSYy1g8H4yDpGlEdshL1PBiFtBHepF2cNsqeEeFQ=="
   "resolved" "https://registry.npmmirror.com/event-pubsub/-/event-pubsub-4.3.0.tgz"
@@ -4198,6 +4208,13 @@
     "locate-path" "^5.0.0"
     "path-exists" "^4.0.0"
 
+"fizzy-ui-utils@^2.0.0":
+  "integrity" "sha512-CZXDVXQ1If3/r8s0T+v+qVeMshhfcuq0rqIFgJnrtd+Bu8GmDmqMjntjUePypVtjHXKJ6V4sw9zeyox34n9aCg=="
+  "resolved" "https://registry.npmjs.org/fizzy-ui-utils/-/fizzy-ui-utils-2.0.7.tgz"
+  "version" "2.0.7"
+  dependencies:
+    "desandro-matches-selector" "^2.0.0"
+
 "flat-cache@^2.0.1":
   "integrity" "sha512-LoQe6yDuUMDzQAEH8sgmh4Md6oZnc/7PjtwjNFSzveXqSHt6ka9fPBuso7IGf9Rz4uqnSnWiFH2B/zj24a5ReA=="
   "resolved" "https://registry.npmmirror.com/flat-cache/-/flat-cache-2.0.1.tgz"
@@ -4352,6 +4369,11 @@
     "function-bind" "^1.1.1"
     "has" "^1.0.3"
     "has-symbols" "^1.0.3"
+
+"get-size@^2.0.2":
+  "integrity" "sha512-lXNzT/h/dTjTxRbm9BXb+SGxxzkm97h/PCIKtlN/CBCxxmkkIVV21udumMS93MuVTDX583gqc94v3RjuHmI+2Q=="
+  "resolved" "https://registry.npmjs.org/get-size/-/get-size-2.0.3.tgz"
+  "version" "2.0.3"
 
 "get-stream@^3.0.0":
   "integrity" "sha512-GlhdIUuVakc8SJ6kK0zAFbiGzRFzNnY4jUuEbV9UROo4Y+0Ny4fjvcZFVTeDA4odpFyOQzaw6hXukJSq/f28sQ=="
@@ -4847,6 +4869,13 @@
   "integrity" "sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg=="
   "resolved" "https://registry.npmmirror.com/ignore/-/ignore-4.0.6.tgz"
   "version" "4.0.6"
+
+"imagesloaded@4.1.4":
+  "integrity" "sha512-ltiBVcYpc/TYTF5nolkMNsnREHW+ICvfQ3Yla2Sgr71YFwQ86bDwV9hgpFhFtrGPuwEx5+LqOHIrdXBdoWwwsA=="
+  "resolved" "https://registry.npmjs.org/imagesloaded/-/imagesloaded-4.1.4.tgz"
+  "version" "4.1.4"
+  dependencies:
+    "ev-emitter" "^1.0.0"
 
 "import-cwd@^2.0.0":
   "integrity" "sha512-Ew5AZzJQFqrOV5BTW3EIoHAnoie1LojZLXKcCQ/yTRyVZosBhK1x1ViYjHGf5pAFOq8ZyChZp6m/fSN7pJyZtg=="
@@ -5708,6 +5737,14 @@
   dependencies:
     "object-visit" "^1.0.0"
 
+"masonry-layout@^4.2.2":
+  "integrity" "sha512-iGtAlrpHNyxaR19CvKC3npnEcAwszXoyJiI8ARV2ePi7fmYhIud25MHK8Zx4P0LCC4d3TNO9+rFa1KoK1OEOaA=="
+  "resolved" "https://registry.npmjs.org/masonry-layout/-/masonry-layout-4.2.2.tgz"
+  "version" "4.2.2"
+  dependencies:
+    "get-size" "^2.0.2"
+    "outlayer" "^2.1.0"
+
 "md5.js@^1.3.4":
   "integrity" "sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg=="
   "resolved" "https://registry.npmmirror.com/md5.js/-/md5.js-1.3.5.tgz"
@@ -6317,6 +6354,15 @@
   "integrity" "sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g=="
   "resolved" "https://registry.npmmirror.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz"
   "version" "1.0.2"
+
+"outlayer@^2.1.0":
+  "integrity" "sha512-+GplXsCQ3VrbGujAeHEzP9SXsBmJxzn/YdDSQZL0xqBmAWBmortu2Y9Gwdp9J0bgDQ8/YNIPMoBM13nTwZfAhw=="
+  "resolved" "https://registry.npmjs.org/outlayer/-/outlayer-2.1.1.tgz"
+  "version" "2.1.1"
+  dependencies:
+    "ev-emitter" "^1.0.0"
+    "fizzy-ui-utils" "^2.0.0"
+    "get-size" "^2.0.2"
 
 "p-finally@^1.0.0":
   "integrity" "sha512-LICb2p9CB7FS+0eR1oqWnHhp0FljGLZCWBE9aix0Uye9W8LTQPwMTYVGWQWIw9RdQiDg4+epXQODwIYJtSJaow=="
@@ -8754,6 +8800,15 @@
     "loader-utils" "^1.1.0"
     "vue-hot-reload-api" "^2.3.0"
     "vue-style-loader" "^4.1.0"
+
+"vue-masonry@^0.11.8":
+  "integrity" "sha512-O+T+3zUghbKpjc+5aubXr8Kg1h9P334+Or9euYyXsQYa3mtScUqZFI6A16BijR9v4hYdtKksuPzU0mQplUvhDA=="
+  "resolved" "https://registry.npmjs.org/vue-masonry/-/vue-masonry-0.11.8.tgz"
+  "version" "0.11.8"
+  dependencies:
+    "imagesloaded" "4.1.4"
+    "masonry-layout" "^4.2.2"
+    "vue" "^2.0.0"
 
 "vue-style-loader@^4.1.0", "vue-style-loader@^4.1.2":
   "integrity" "sha512-sFuh0xfbtpRlKfm39ss/ikqs9AbKCoXZBpHeVZ8Tx650o0k0q/YCM7FRvigtxpACezfq6af+a7JeqVTWvncqDg=="
