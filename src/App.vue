@@ -1,31 +1,30 @@
 <template>
   <v-app>
-   <v-container>
-      <!-- 검색바 -->
-      <search-bar/>
+    <v-container>
+      <search-bar />
+      <error-message />
       <movie-list />
       <!-- 영화목록 -->
-   </v-container>
+    </v-container>
   </v-app>
 </template>
 
 <script>
-import SearchBar from '@/components/SearchBar.vue';
-import MovieList from '@/components/MovieList.vue';
-
+import SearchBar from "@/components/SearchBar.vue";
+import MovieList from "@/components/MovieList.vue";
+import ErrorMessage from "./components/ErrorMessage.vue";
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
     SearchBar,
-    MovieList
+    MovieList,
+    ErrorMessage,
   },
 
   data: () => ({
     //
   }),
-  created(){
-   
-  }
+  created() {},
 };
 </script>
