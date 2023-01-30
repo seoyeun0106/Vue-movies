@@ -1,51 +1,49 @@
-import axios from 'axios';
-const API_KEY ="9b0ceb74"
+import axios from "axios";
+const API_KEY = "9b0ceb74";
 
 export default {
-    namespaced:true,
-    state:()=>({
-        title:"",
-        loading: false,
-        movies:[]
-    }),
-    getters:{},
-    mutations:{
-        updateState(state,payload){
-            Object.keys(payload).forEach(key=>{
-                state[key] = payload[key]
-            })
-        },
-        pushIntoMovies(state, movies){
-            state.movies.push(...movies)
-        }
+  namespaced: true,
+  state: () => ({
+    title: "",
+    loading: false,
+    movies: [],
+  }),
+  getters: {},
+  mutations: {
+    updateState(state, payload) {
+      Object.keys(payload).forEach((key) => {
+        state[key] = payload[key];
+      });
     },
-    actions:{
-        fetchMovies ({ state, commit }, pageNum) {
-            return new Promise(async resolve => {
-              const res = await axios.get(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${state.title}&page=${pageNum}`)
-              commit('pushIntoMovies', res.data.Search);
-              resolve(res.data)
-            })
-          },
-        async searchMovies({commit, dispatch}){
-            commit('updateState',{
-                loading:true,
-                movies:[]  
-            })
-            const {totalResults} = await dispatch('fetchMovies',1)
-            const pageLength = Math.ceil(totalResults/10)
+    pushIntoMovies(state, movies) {
+      state.movies.push(...movies);
+    },
+  },
+  actions: {
+    async fetchMovies({ state, commit }, pageNum) {
+      const res = await axios.get(
+        `https://www.omdbapi.com/?apikey=${API_KEY}&s=${state.title}&page=${pageNum}`
+      );
+      commit("pushIntoMovies", res.data.Search);
+      return res.data;
+    },
+    async searchMovies({ commit, dispatch }) {
+      commit("updateState", {
+        loading: true,
+        movies: [],
+      });
+      const { totalResults } = await dispatch("fetchMovies", 1);
+      const pageLength = Math.ceil(totalResults / 10);
 
-            if(pageLength>1){
-                for(let i=2;i<=pageLength;i++){
-                    if(i>4) break
-                    await dispatch('fetchMovies',i); 
-                }
-            }
-            commit('updateState',{
-                loading:false,  
-            })
-
+      if (pageLength > 1) {
+        for (let i = 2; i <= pageLength; i++) {
+          if (i > 4) break;
+          await dispatch("fetchMovies", i);
         }
-        
-    }
-}
+      }
+      commit("updateState", {
+        loading: false,
+      });
+    },
+  },
+};
